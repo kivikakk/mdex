@@ -39,3 +39,8 @@ checksum-*.exs
 /examples/*.html
 
 mise.toml
+
+# Nix
+/result
+/.nix-hex
+/.nix-mix
