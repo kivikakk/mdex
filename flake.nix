@@ -2,7 +2,7 @@
   description = "MDEx";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     flake-utils.url = "github:numtide/flake-utils";
     rust-overlay = {
       url = "github:oxalica/rust-overlay";
@@ -27,8 +27,8 @@
       system: let
         overlays = [(import rust-overlay)];
         pkgs = import nixpkgs {inherit system overlays;};
-        erlang = pkgs.beam_nox.interpreters.erlang_27;
-        beamPackages = pkgs.beam_nox.packagesWith erlang;
+        erlang = pkgs.beam_minimal.interpreters.erlang_27;
+        beamPackages = pkgs.beam_minimal.packagesWith erlang;
         elixir = beamPackages.elixir_1_18;
         rust-ver = pkgs.rust-bin.stable.latest;
       in {

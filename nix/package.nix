@@ -20,7 +20,7 @@
     cargoLock = {
       lockFile = ../native/comrak_nif/Cargo.lock;
       outputHashes = {
-        "autumnus-0.3.0" = "sha256-1nm25GGYSqOTkEsQO3E1WoE+In7E4mr/QWcSCH5iZug=";
+        #"autumnus-0.3.2" = "sha256-ekJIDK6keVxYcixrVrkGZhEwb2P9Cl5mqdSeq9ZeVCA=";
       };
     };
   };
