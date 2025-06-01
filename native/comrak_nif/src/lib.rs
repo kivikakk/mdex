@@ -63,6 +63,7 @@ fn markdown_to_html_with_options<'a>(
     let arena = Arena::new();
     let root = comrak::parse_document(&arena, md, &comrak_options);
     let mut plugins = ComrakPlugins::default();
+    let do_syntax_highlight = options.syntax_highlight.is_some();
     let autumnus_adapter = AutumnusAdapter::new(
         options
             .syntax_highlight
@@ -70,7 +71,9 @@ fn markdown_to_html_with_options<'a>(
             .formatter
             .into(),
     );
-    plugins.render.codefence_syntax_highlighter = Some(&autumnus_adapter);
+    if do_syntax_highlight {
+        plugins.render.codefence_syntax_highlighter = Some(&autumnus_adapter);
+    }
     let mut buffer = vec![];
 
     HTMLFormatter::format_document_with_plugins(root, &comrak_options, &mut buffer, &plugins)
