@@ -13,11 +13,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1748594723,
-        "narHash": "sha256-F2YHLYSaErn0WEjnZV+Z56kBZ7v6hahdJlOyDmVq5gs=",
+        "lastModified": 1754102998,
+        "narHash": "sha256-7qtDlQeRbAvUfoz+/SQ0+oY/gcndY7cegWSfAj3Hilo=",
         "owner": "kivikakk",
         "repo": "autumn",
-        "rev": "e19535904b9f9296cf85a1e7aac985cc1377123e",
+        "rev": "06ba69ab3f0c77db953dd56e176bce141473960b",
         "type": "github"
       },
       "original": {

@@ -43,7 +43,7 @@ in
         skip_compilation?: true
     '';
 
-    preConfigure = ''
+    postConfigure = ''
       mkdir -p priv/native
       # HACK: ensure the target is .so, even if it was a .dylib. (Nix on Darwin
       # workaround.)
